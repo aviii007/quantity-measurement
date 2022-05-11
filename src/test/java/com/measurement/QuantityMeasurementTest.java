@@ -69,4 +69,9 @@ public class QuantityMeasurementTest {
         double inch2 = quantityMeasurement.returnLengthType(LengthType.INCH, 1.0);
         assertNotEquals(inch1, inch2, 0.0);
     }
+
+    @Test
+    public void givenNullValueForInch_IfEqual_ShouldReturnFalse() {
+        assertFalse(quantityMeasurement.equals(null));
+    }
 }
