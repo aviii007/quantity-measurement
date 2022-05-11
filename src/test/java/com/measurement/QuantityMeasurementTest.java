@@ -93,4 +93,13 @@ public class QuantityMeasurementTest {
         double value2 = quantityMeasurement.returnLengthType(LengthType.INCH, 2.2);
         assertEquals(value1, value2, 0.0);
     }
+    // Feet and Inch
+
+    @Test
+    public void given1FeetAnd1Inch_IfNotEqual_ShouldReturnTrue() {
+        double feet = quantityMeasurement.returnLengthType(LengthType.FEET, 1.0);
+        double inch = quantityMeasurement.returnLengthType(LengthType.INCH, 1.0);
+        assertNotEquals(feet, inch, 0.0);
+
+    }
 }
