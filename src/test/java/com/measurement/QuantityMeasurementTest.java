@@ -137,4 +137,11 @@ public class QuantityMeasurementTest {
         inch2 = quantityMeasurement.returnLengthType(LengthType.YARD, 1.0);
         assertEquals(inch1, inch2, 0.0);
     }
+
+    @Test
+    public void given1FeetAnd1Yard_WhenNotEqual_ShouldReturnTrue() {
+        inch1 = quantityMeasurement.returnLengthType(LengthType.FEET, 1.0);
+        inch2 = quantityMeasurement.returnLengthType(LengthType.YARD, 1.0);
+        assertNotEquals(inch1, inch2, 0.0);
+    }
 }
