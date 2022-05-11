@@ -8,6 +8,7 @@ import static org.junit.Assert.*;
 
 public class QuantityMeasurementTest {
     private static QuantityMeasurement quantityMeasurement;
+    private double inch1, inch2;
 
     @Before
     public void setUp() {
@@ -127,5 +128,13 @@ public class QuantityMeasurementTest {
     public void given12InchAnd1Feet_IfEqual_ShouldReturnTrue() {
         double feet = quantityMeasurement.returnLengthType(LengthType.INCH, 12.0);
         assertEquals(1.0, feet, 0.0);
+    }
+    // Yard
+
+    @Test
+    public void given3FeetAnd1Yard_WhenEqual_ShouldReturnTrue() {
+        inch1 = quantityMeasurement.returnLengthType(LengthType.FEET, 3.0);
+        inch2 = quantityMeasurement.returnLengthType(LengthType.YARD, 1.0);
+        assertEquals(inch1, inch2, 0.0);
     }
 }
