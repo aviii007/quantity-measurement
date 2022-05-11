@@ -74,4 +74,9 @@ public class QuantityMeasurementTest {
     public void givenNullValueForInch_IfEqual_ShouldReturnFalse() {
         assertFalse(quantityMeasurement.equals(null));
     }
+
+    @Test
+    public void givenReferenceForInch_IfEqual_ShouldReturnTrue() {
+        assertTrue(quantityMeasurement.equals(quantityMeasurement));
+    }
 }
