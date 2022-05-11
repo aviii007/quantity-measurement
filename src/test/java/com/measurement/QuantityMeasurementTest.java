@@ -1,5 +1,6 @@
 package com.measurement;
 
+import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -35,5 +36,12 @@ public class QuantityMeasurementTest {
     @Test
     public void givenReferenceForFeet_IfEqual_ShouldReturnTrue() {
         assertTrue(quantityMeasurement.equals(quantityMeasurement));
+    }
+
+    @Test
+    public void givenType_IfEqual_ShouldReturnTrue() {
+        QuantityMeasurement quantity1 = new QuantityMeasurement();
+        QuantityMeasurement quantity2 = new QuantityMeasurement();
+        Assert.assertEquals(quantity1, quantity2);
     }
 }
