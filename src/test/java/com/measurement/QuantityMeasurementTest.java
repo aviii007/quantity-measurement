@@ -116,4 +116,10 @@ public class QuantityMeasurementTest {
         double feet = quantityMeasurement.returnLengthType(LengthType.FEET, 1.0);
         assertNotEquals(inch, feet, 0.0);
     }
+
+    @Test
+    public void given1FeetAnd12Inch_IfEqual_ShouldReturnTrue() {
+        double inch = quantityMeasurement.returnLengthType(LengthType.FEET, 1.0);
+        assertEquals(12, inch, 0.0);
+    }
 }
