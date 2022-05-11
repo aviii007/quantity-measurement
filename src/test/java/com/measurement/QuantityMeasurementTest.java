@@ -14,6 +14,8 @@ public class QuantityMeasurementTest {
         quantityMeasurement = new QuantityMeasurement();
     }
 
+    //Feet
+
     @Test
     public void given0FeetAnd0Feet_IfEqual_ShouldReturnTrue() {
         double feet1 = quantityMeasurement.returnLengthType(LengthType.FEET, 0.0);
@@ -50,5 +52,14 @@ public class QuantityMeasurementTest {
         double value1 = quantityMeasurement.returnLengthType(LengthType.FEET, 2.2);
         double value2 = quantityMeasurement.returnLengthType(LengthType.FEET, 2.2);
         assertEquals(value1, value2, 0.0);
+    }
+
+    //inch
+
+    @Test
+    public void given0InchAnd0Inch_IfEqual_ShouldReturnTrue() {
+        double inch1 = quantityMeasurement.returnLengthType(LengthType.INCH, 0.0);
+        double inch2 = quantityMeasurement.returnLengthType(LengthType.INCH, 0.0);
+        assertEquals(inch1, inch2, 0.0);
     }
 }
