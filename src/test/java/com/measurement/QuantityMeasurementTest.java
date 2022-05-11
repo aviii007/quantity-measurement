@@ -19,4 +19,10 @@ public class QuantityMeasurementTest {
         double feet2 = quantityMeasurement.returnLengthType(LengthType.FEET, 0.0);
         assertEquals(feet1, feet2, 0.0);
     }
+    @Test
+    public void given0FeetAnd1Feet_IfNotEqual_ShouldReturnTrue() {
+        double feet1 = quantityMeasurement.returnLengthType(LengthType.FEET, 0.0);
+        double feet2 = quantityMeasurement.returnLengthType(LengthType.FEET, 1.0);
+        assertNotEquals(feet1, feet2, 0.0);
+    }
 }
